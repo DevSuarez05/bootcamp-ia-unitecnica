@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduccion a HTML</title>
+    <title>Formulario Registro Usuario</title>
 </head>
 <body>
-    <H1>Introduccion a HTML</H1>
-     <H6>Subtitulo</H6>
-     <p>lorem ipsum dolor sit amet</p>
-     <label for="nombre">Nombre:</label>
-     <input type="text" id="nombre" name="nombre">
+
+    <h2>Formulario Registro Usuario</h2>
+
+    <!-- Fila 1: Campos de texto agrupados sin <br> entre ellos -->
+    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre">
+    <input type="text" id="apellido" name="apellido" placeholder="Ingrese su Apellido">
+    <input type="email" id="correo" name="correo" placeholder="Ingrese su Correo">
+    <input type="password" id="password" name="password" placeholder="Ingrese su Contraseña">
+
+    <br><br> <!-- Salto de línea doble para separar del Checkbox -->
+
+    <!-- Fila 2: Términos y condiciones -->
+    <input type="checkbox" id="terminos" name="terminos">
+    <label for="terminos">Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></label>
+
+    <br><br> <!-- Salto de línea doble para separar del Botón -->
+
+    <!-- Fila 3: Botón de envío -->
+    <input type="submit" value="Registrar">
+
+    <br><br> <!-- Salto de línea doble para separar del Enlace -->
+
+    <!-- Fila 4: Enlace final -->
+    <a href="#">¿Ya tengo Cuenta?</a>
+
 </body>
-</html>
+</html>     
