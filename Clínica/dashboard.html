@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Más Vida - Panel de Control</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">+</div>
+        <span>Clínica Más Vida</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="dashboard.html" class="nav-link active"><span>📊</span> Dashboard</a></li>
+        <li><a href="pacientes.html" class="nav-link"><span>👤</span> Pacientes</a></li>
+        <li><a href="medicos.html" class="nav-link"><span>👨‍⚕️</span> Médicos</a></li>
+        <li><a href="ingresos.html" class="nav-link"><span>🏥</span> Ingresos Clínicos</a></li>
+      </ul>
+    </aside>
+
+    <!-- Content -->
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar paciente, médico o ingreso...">
+        </div>
+        <div class="user-profile">
+          <div class="user-avatar">AD</div>
+          <span>Admin Sistema</span>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="page-header">
+          <div class="page-title">
+            <h1>Panel Principal</h1>
+            <p>Gestión informatizada de admisiones, pacientes y cuerpo médico.</p>
+          </div>
+          <a href="ingresos.html" class="btn btn-primary">+ Nuevo Ingreso</a>
+        </div>
+
+        <!-- KPIs -->
+        <div class="grid-kpi">
+          <div class="kpi-card">
+            <div class="kpi-icon">🏥</div>
+            <div class="kpi-data">
+              <h3>Ingresos Activos</h3>
+              <div class="value">24</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon">👤</div>
+            <div class="kpi-data">
+              <h3>Pacientes Registrados</h3>
+              <div class="value">1,280</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon">👨‍⚕️</div>
+            <div class="kpi-data">
+              <h3>Médicos Disponibles</h3>
+              <div class="value">42</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon">🛏️</div>
+            <div class="kpi-data">
+              <h3>Habitaciones Ocupadas</h3>
+              <div class="value">85%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Últimos Ingresos -->
+        <div class="card">
+          <h2 style="font-size: 18px; margin-bottom: 16px;">Últimos Ingresos Registrados</h2>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Cód. Ingreso</th>
+                  <th>Fecha</th>
+                  <th>Paciente</th>
+                  <th>Habitación / Cama</th>
+                  <th>Médico Asignado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#ING-00104</strong></td>
+                  <td>2026-09-17</td>
+                  <td>García Pérez, Carlos</td>
+                  <td>Hab. 302 - Cama 1</td>
+                  <td>Dr. Ramírez (Cardiología)</td>
+                </tr>
+                <tr>
+                  <td><strong>#ING-00103</strong></td>
+                  <td>2026-09-16</td>
+                  <td>López Gómez, María</td>
+                  <td>Hab. 104 - Cama 2</td>
+                  <td>Dra. Torres (Pediatría)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

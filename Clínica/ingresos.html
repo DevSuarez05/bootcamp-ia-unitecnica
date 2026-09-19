@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Más Vida - Ingresos Hospitalarios</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">+</div>
+        <span>Clínica Más Vida</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="dashboard.html" class="nav-link"><span>📊</span> Dashboard</a></li>
+        <li><a href="pacientes.html" class="nav-link"><span>👤</span> Pacientes</a></li>
+        <li><a href="medicos.html" class="nav-link"><span>👨‍⚕️</span> Médicos</a></li>
+        <li><a href="ingresos.html" class="nav-link active"><span>🏥</span> Ingresos Clínicos</a></li>
+      </ul>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar ingreso...">
+        </div>
+        <div class="user-profile">
+          <div class="user-avatar">AD</div>
+          <span>Admin Sistema</span>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="page-header">
+          <div class="page-title">
+            <h1>Registro de Ingresos</h1>
+            <p>Control de hospitalizaciones y asignación médica de la clínica.</p>
+          </div>
+        </div>
+
+        <!-- Formulario de Nuevo Ingreso -->
+        <div class="card">
+          <h2 style="font-size: 18px; margin-bottom: 16px;">Registrar Nuevo Ingreso Hospitalario</h2>
+          <form class="form-grid">
+            <div class="form-group">
+              <label>Código de Ingreso (Auto-generado)</label>
+              <input type="text" class="form-control" value="ING-00105" readonly style="background-color: var(--color-bg); font-weight: bold;">
+            </div>
+            <div class="form-group">
+              <label>Fecha de Ingreso</label>
+              <input type="datetime-local" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Paciente</label>
+              <select class="form-control" required>
+                <option value="">Seleccione un paciente...</option>
+                <option value="1">PAC-1001 - Carlos García Pérez</option>
+                <option value="2">PAC-1002 - María López Gómez</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Médico Atendiente (Único responsable)</label>
+              <select class="form-control" required>
+                <option value="">Seleccione el médico asignado...</option>
+                <option value="1">MED-201 - Dr. Alejandro Ramírez (Cardiología)</option>
+                <option value="2">MED-202 - Dra. Beatriz Torres (Pediatría)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Número de Habitación</label>
+              <input type="text" class="form-control" placeholder="Ej: 302" required>
+            </div>
+            <div class="form-group">
+              <label>Número de Cama</label>
+              <input type="text" class="form-control" placeholder="Ej: Cama 1" required>
+            </div>
+
+            <div class="form-group" style="grid-column: 1 / -1; display: flex; justify-content: flex-end; gap: 12px; margin-top: 8px;">
+              <button type="button" class="btn btn-secondary">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Registrar Ingreso</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

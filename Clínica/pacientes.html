@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Más Vida - Gestión de Pacientes</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">+</div>
+        <span>Clínica Más Vida</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="dashboard.html" class="nav-link"><span>📊</span> Dashboard</a></li>
+        <li><a href="pacientes.html" class="nav-link active"><span>👤</span> Pacientes</a></li>
+        <li><a href="medicos.html" class="nav-link"><span>👨‍⚕️</span> Médicos</a></li>
+        <li><a href="ingresos.html" class="nav-link"><span>🏥</span> Ingresos Clínicos</a></li>
+      </ul>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar por código, nombre o apellido...">
+        </div>
+        <div class="user-profile">
+          <div class="user-avatar">AD</div>
+          <span>Admin Sistema</span>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="page-header">
+          <div class="page-title">
+            <h1>Gestión de Pacientes</h1>
+            <p>Registro e historial de pacientes de la clínica.</p>
+          </div>
+        </div>
+
+        <!-- Formulario Registro Paciente -->
+        <div class="card">
+          <h2 style="font-size: 18px; margin-bottom: 16px;">Registrar / Editar Paciente</h2>
+          <form class="form-grid">
+            <div class="form-group">
+              <label>Código del Paciente</label>
+              <input type="text" class="form-control" placeholder="PAC-1001" required>
+            </div>
+            <div class="form-group">
+              <label>Nombre</label>
+              <input type="text" class="form-control" placeholder="Carlos" required>
+            </div>
+            <div class="form-group">
+              <label>Apellidos</label>
+              <input type="text" class="form-control" placeholder="García Pérez" required>
+            </div>
+            <div class="form-group">
+              <label>Teléfono</label>
+              <input type="tel" class="form-control" placeholder="+57 300 000 0000" required>
+            </div>
+            <div class="form-group">
+              <label>Fecha de Nacimiento</label>
+              <input type="date" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Dirección</label>
+              <input type="text" class="form-control" placeholder="Calle 45 # 23-10">
+            </div>
+            <div class="form-group">
+              <label>Población</label>
+              <input type="text" class="form-control" placeholder="Manizales">
+            </div>
+            <div class="form-group">
+              <label>Departamento</label>
+              <input type="text" class="form-control" placeholder="Caldas">
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1; display: flex; justify-content: flex-end; gap: 12px; margin-top: 8px;">
+              <button type="button" class="btn btn-secondary">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Guardar Paciente</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Listado de Pacientes -->
+        <div class="card">
+          <h2 style="font-size: 18px; margin-bottom: 16px;">Listado de Pacientes</h2>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Nombre Completo</th>
+                  <th>Teléfono</th>
+                  <th>Población / Depto</th>
+                  <th>Fecha Nac.</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>PAC-1001</strong></td>
+                  <td>Carlos García Pérez</td>
+                  <td>300 123 4567</td>
+                  <td>Manizales, Caldas</td>
+                  <td>1985-04-12</td>
+                  <td>
+                    <button class="btn btn-secondary" style="height: 32px; padding: 0 10px; font-size: 13px;">Editar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

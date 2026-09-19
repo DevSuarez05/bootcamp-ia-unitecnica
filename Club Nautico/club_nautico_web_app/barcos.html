@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barcos y Amarres - Club Náutico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-layout">
+    
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="sidebar-brand">
+          <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 19h20L12 2zm0 4.2L18.1 17H5.9L12 6.2z"/></svg>
+          <span>Club Náutico</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item ">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8v-10h-8v10zm0-18v6h8V3h-8z"/></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="socios.html" class="nav-item ">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          <span>Socios</span>
+        </a>
+        <a href="barcos.html" class="nav-item active">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 21c-1.39 0-2.78-.47-4-1.32-2.44 1.71-5.56 1.71-8 0C6.78 20.53 5.39 21 4 21H2v2h2c1.8 0 3.58-.5 5.12-1.46 2.94 1.84 6.82 1.84 9.76 0C20.42 22.5 22.2 23 24 23v-2h-4zM20 6h-3V4c0-1.1-.9-2-2-2h-6c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v3c0 3.87 3.13 7 7 7h6c3.87 0 7-3.13 7-7V8c0-1.1-.9-2-2-2z"/></svg>
+          <span>Barcos y Amarres</span>
+        </a>
+        <a href="salidas.html" class="nav-item ">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          <span>Bitácora de Salidas</span>
+        </a>
+      </nav>
+    </aside>
+
+    <div class="main-wrapper">
+      
+      <header class="top-header">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <button class="mobile-toggle" id="mobileMenuToggle">☰</button>
+          <div class="search-box">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="text" id="tableSearchInput" placeholder="Buscar socio, barco, patrón...">
+          </div>
+        </div>
+        <div class="user-profile">
+          <div class="avatar">CN</div>
+          <div class="user-info">
+            <span class="user-name">Capitanía del Puerto</span>
+            <span class="user-role">Administrador</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="content-container">
+        <div class="page-title-bar">
+          <div>
+            <h1 class="page-title">Gestión de Barcos y Amarres</h1>
+            <p class="page-subtitle">Listado de embarcaciones, número de amarre asignado, cuota y propietario socio.</p>
+          </div>
+          <button class="btn btn-primary" data-modal-target="modalBarco">+ Registrar Barco</button>
+        </div>
+
+        <div class="card">
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Matrícula</th>
+                  <th>Nombre del Barco</th>
+                  <th>Nº Amarre</th>
+                  <th>Cuota Mensual</th>
+                  <th>Socio Propietario</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>3-BA-1234-22</strong></td>
+                  <td>Nautilus II</td>
+                  <td><span class="status-tag active">Amarre A-12</span></td>
+                  <td>$250.00 / mes</td>
+                  <td>Alejandro Morales (12345678A)</td>
+                  <td>
+                    <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">Editar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>3-BA-5678-21</strong></td>
+                  <td>Estrella del Mar</td>
+                  <td><span class="status-tag active">Amarre B-05</span></td>
+                  <td>$310.00 / mes</td>
+                  <td>Beatriz Fernández (87654321B)</td>
+                  <td>
+                    <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">Editar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>3-BA-9012-23</strong></td>
+                  <td>Poseidón</td>
+                  <td><span class="status-tag active">Amarre A-08</span></td>
+                  <td>$420.00 / mes</td>
+                  <td>Carlos Benítez (45678912C)</td>
+                  <td>
+                    <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">Editar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal Nuevo Barco -->
+  <div class="modal-backdrop" id="modalBarco">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Registrar Nueva Embarcación</h3>
+        <button class="modal-close" data-modal-close>&times;</button>
+      </div>
+      <form data-action-submit>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Número de Matrícula</label>
+            <input type="text" class="form-control" required placeholder="Ej: 3-BA-1234-22">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nombre del Barco</label>
+            <input type="text" class="form-control" required placeholder="Ej: Oceanis 38">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Número de Amarre</label>
+            <input type="text" class="form-control" required placeholder="Ej: Amarre C-14">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Cuota ($/mes)</label>
+            <input type="number" class="form-control" required placeholder="Ej: 280.00">
+          </div>
+          <div class="form-group full-width">
+            <label class="form-label">Socio Propietario</label>
+            <select class="form-control" required>
+              <option value="">Seleccione un socio...</option>
+              <option value="1">Alejandro Morales - 12345678A</option>
+              <option value="2">Beatriz Fernández - 87654321B</option>
+              <option value="3">Carlos Benítez - 45678912C</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-modal-close>Cancelar</button>
+          <button type="submit" class="btn btn-primary">Guardar Barco</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

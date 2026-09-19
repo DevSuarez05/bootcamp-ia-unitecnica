@@ -1,0 +1,23 @@
+:root {
+  /* Colores Principales */
+  --primary-navy: #0f2137;
+  --primary-navy-hover: #172e4a;
+  --accent-caribbean: #009688;
+  --accent-caribbean-hover: #00796b;
+  --accent-sun: #ffb703;
+
+  /* Neutros y Fondos */
+  --bg-main: #f8f9fa;
+  --bg-surface: #ffffff;
+  --border-color: #e2e8f0;
+
+  /* Tipografía */
+  --text-primary: #0f2137;
+  --text-secondary: #6c7a89;
+  --text-on-dark: #ffffff;
+
+  /* Estados */
+  --status-active: #2e7d32;
+  --status-pending: #ffb703;
+  --status-danger: #d32f2f;
+}
