@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetación Html</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <div>
+        <h1>Nombre App o Título Página</h1>
+
+        <div id="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="contenido">
+        <h2>Bienvenido a nuestra App</h2>
+
+        <p>
+            Este es un formulario de registro de ejemplo. Por favor, complete los campos requeridos para crear una cuenta.
+        </p>
+    </div>
+
+    <section id="formulario">
+        <h3>Formulario Registro</h3>
+
+        <form>
+            <input class="campo" type="text" name="nombre" placeholder="Ingrese su Nombre" required>
+            <input class="campo" type="text" name="apellido" placeholder="Ingrese su Apellido" required>
+            <input class="campo" type="email" name="correo" placeholder="Ingrese su Correo" required>
+            <input class="campo" type="password" name="contrasena" placeholder="Ingrese su Contraseña" required>
+
+            <p>Estoy de acuerdo con <a href="#">Términos y Condiciones</a></p>
+
+            <input class="boton" type="submit" value="Registrar">
+
+            <p>¿Ya tienes una cuenta? <a href="#">Inicia sesión</a></p>
+        </form>
+    </section>
+
+    <div id="pie">
+        <p>Derechos reservados © 2024</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo While (Mientras)</title>
+</head>
+<body>
+    <script>
+        let temperatura, sumat, prom;
+        let i;
+        sumat = 0;
+        i = 1;
+        while (i <= 5) {
+            temperatura = prompt("Ingrese la temperatura del día " + i + ":");
+            document.write("La temperatura del día " + i + " es: " + temperatura + "<br>");
+            sumat = sumat + parseFloat(temperatura);
+            i++;
+        }
+        prom = sumat / 5;
+        document.write("La temperatura promedio es: " + prom);
+    </script>
+</body>
+</html>
